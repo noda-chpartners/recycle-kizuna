@@ -15,8 +15,8 @@ export default function ContactSection() {
               お問い合わせ
             </h2>
             <p className="text-primary-200 text-sm md:text-base max-w-2xl mx-auto">
-              出張買取のご依頼、査定のご相談、リフォームのお見積りなど<br />
-              まずはお気軽にお電話にてお問い合わせください。
+              買取・整理・内装工事のご依頼、ご相談など<br />
+              お気軽にお電話ください。
             </p>
           </div>
         </ScrollReveal>
@@ -37,7 +37,7 @@ export default function ContactSection() {
               <p className="text-primary-200/80 text-xs md:text-sm pt-2">受付時間：9:00 〜 17:00（年中無休）</p>
 
               <div className="mt-8 pt-8  w-full">
-                <p className="text-primary-200 text-sm mb-2">ウェブサイトからもお問い合わせいただけます</p>
+                <p className="text-primary-200 text-sm mb-2">ウェブサイトでのお問い合わせ</p>
                 <a
                   href="https://jj8csp.wixsite.com/recycle-kizuna/contact"
                   target="_blank"

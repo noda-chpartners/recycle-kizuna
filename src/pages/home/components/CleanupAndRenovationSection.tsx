@@ -17,7 +17,7 @@ export default function CleanupAndRenovationSection() {
               遺品・生前整理＆内装工事
             </h2>
             <p className="text-foreground-600 text-sm md:text-base max-w-2xl mx-auto">
-              整理からリフォームまでワンストップで対応。<br />遺品整理後の内装工事もお任せください。
+              整理からリフォームまで対応します。<br />遺品整理後の内装工事もお任せください。
             </p>
           </div>
         </ScrollReveal>
@@ -48,7 +48,7 @@ export default function CleanupAndRenovationSection() {
                   {/* メッセージの強調 */}
                   <div className="bg-primary-50/50 border border-primary-100 rounded-lg p-3 text-center my-1">
                     <p className="font-bold text-primary-800 text-sm md:text-base">
-                      要らない・不要 ＝ <span className="text-accent-600">売る</span> の時代です
+                      要らない ＝ <span className="text-accent-600">売る</span> の時代です
                     </p>
                   </div>
                   

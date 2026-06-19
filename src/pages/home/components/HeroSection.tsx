@@ -8,8 +8,6 @@ import seiri from '@/assets/seiri.jpg';
 import kouji from '@/assets/kouji.jpg';
 
 export default function HeroSection() {
-
-
   const imagesRow1 = [
     bag,
     clock,
@@ -38,11 +36,9 @@ export default function HeroSection() {
         }
         .animate-scroll-left {
           animation: scrollLeft 50s linear infinite;
-          width: max-content;
         }
         .animate-scroll-right {
           animation: scrollRight 50s linear infinite;
-          width: max-content;
         }
       `}</style>
 
@@ -50,34 +46,44 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0 flex flex-col opacity-80">
         {/* 上段：左へスクロール */}
         <div className="flex-1 overflow-hidden relative w-full">
-          <div className="animate-scroll-left flex h-full gap-2">
-            {/* 1セット目 */}
-            {imagesRow1.map((src, idx) => (
-              <img key={`r1-1-${idx}`} src={src} alt="" className="h-full w-[300px] md:w-[450px] object-cover rounded-md" />
-            ))}
-            {/* 2セット目（シームレスループ用） */}
-            {imagesRow1.map((src, idx) => (
-              <img key={`r1-2-${idx}`} src={src} alt="" className="h-full w-[300px] md:w-[450px] object-cover rounded-md" />
-            ))}
+          {/* w-max を付与し、全体の幅を確保 */}
+          <div className="animate-scroll-left flex h-full w-max">
+            {/* 1セット目：セットごとにdivで囲み、余白計算を正確にする */}
+            <div className="flex shrink-0 gap-2 pr-2">
+              {imagesRow1.map((src, idx) => (
+                <img key={`r1-1-${idx}`} src={src} alt="" className="h-full w-[300px] md:w-[450px] object-cover rounded-md shrink-0" />
+              ))}
+            </div>
+            {/* 2セット目 */}
+            <div className="flex shrink-0 gap-2 pr-2">
+              {imagesRow1.map((src, idx) => (
+                <img key={`r1-2-${idx}`} src={src} alt="" className="h-full w-[300px] md:w-[450px] object-cover rounded-md shrink-0" />
+              ))}
+            </div>
           </div>
         </div>
 
         {/* 下段：右へスクロール */}
-        <div className="flex-1 overflow-hidden relative w-full rounded-md">
-          <div className="animate-scroll-right flex h-full gap-2">
+        <div className="flex-1 overflow-hidden relative w-full rounded-md mt-2">
+          {/* w-max を付与 */}
+          <div className="animate-scroll-right flex h-full w-max">
             {/* 1セット目 */}
-            {imagesRow2.map((src, idx) => (
-              <img key={`r2-1-${idx}`} src={src} alt="" className="h-full w-[300px] md:w-[450px] object-cover rounded-md" />
-            ))}
-            {/* 2セット目（シームレスループ用） */}
-            {imagesRow2.map((src, idx) => (
-              <img key={`r2-2-${idx}`} src={src} alt="" className="h-full w-[300px] md:w-[450px] object-cover rounded-md" />
-            ))}
+            <div className="flex shrink-0 gap-2 pr-2">
+              {imagesRow2.map((src, idx) => (
+                <img key={`r2-1-${idx}`} src={src} alt="" className="h-full w-[300px] md:w-[450px] object-cover rounded-md shrink-0" />
+              ))}
+            </div>
+            {/* 2セット目 */}
+            <div className="flex shrink-0 gap-2 pr-2">
+              {imagesRow2.map((src, idx) => (
+                <img key={`r2-2-${idx}`} src={src} alt="" className="h-full w-[300px] md:w-[450px] object-cover rounded-md shrink-0" />
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* グラデーションオーバーレイ（背景が動くため、文字が読みやすいよう少し暗めに設定） */}
+      {/* グラデーションオーバーレイ */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 z-10"></div>
 
       {/* メインコンテンツ（前面） */}
@@ -87,10 +93,10 @@ export default function HeroSection() {
           <br />
           大切な価値を絆いで行く
         </p>
-        <h2 className="text-background-50 text-base md:text-xl font-medium tracking-widest mb-1">
+        <h2 className="text-background-50 text-sm md:text-xl font-medium tracking-widest mb-1">
           出張買取専門店
         </h2>
-        <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-background-50 mb-4 leading-tight">
+        <h1 className="font-heading text-2xl md:text-5xl lg:text-6xl font-bold text-background-50 mb-4 leading-tight">
           株式会社 リサイクル絆
         </h1>
         <p className="text-background-50/80 text-sm md:text-lg max-w-xl mx-auto mb-8 leading-relaxed">
@@ -108,8 +114,8 @@ export default function HeroSection() {
       </div>
 
       {/* 下スクロールボタン */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-        <a href="#services">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20">
+        <a href="#services" className="flex items-center justify-center animate-bounce">
           <i className="ri-arrow-down-s-line text-background-50/80 hover:text-background-50 transition-colors text-3xl"></i>
         </a>
       </div>

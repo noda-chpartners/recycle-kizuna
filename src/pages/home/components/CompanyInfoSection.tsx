@@ -32,7 +32,7 @@ export default function CompanyInfoSection() {
               </h3>
               <dl className="space-y-4">
                 {infoItems.map((item, i) => (
-                  <div key={item.label} className={`flex flex-col sm:flex-row gap-1 sm:gap-4 ${i < infoItems.length - 1 ? 'pb-4 border-b border-primary-100/50' : ''}`}>
+                  <div key={item.label} className={`flex flex-col sm:flex-row gap-1 sm:gap-4 ${i < infoItems.length - 1 ? 'pb-3 border-b border-foreground-50' : ''}`}>
                     <dt className="text-xs md:text-sm font-bold text-primary-600 whitespace-nowrap sm:w-24 shrink-0">
                       {item.label}
                     </dt>

@@ -9,10 +9,10 @@ const recycleMenu = [
 ];
 
 const reformMenu = [
-  { name: '壁クロス張替え', icon: 'ri-paint-line', desc: '傷んだ壁紙を美しく張替え。豊富な柄から選べます' },
-  { name: '床施工', icon: 'ri-layout-bottom-line', desc: 'キズ・へこみ・きしみもきれいにリフレッシュ' },
+  { name: '壁クロス張替え', icon: 'ri-paint-line', desc: '傷んだ壁紙をしわなく美しく張替えます' },
+  { name: '床施工', icon: 'ri-layout-bottom-line', desc: 'キズ・へこみ・きしみもきれいに整えます' },
   { name: '屋根・壁塗装',  icon: 'ri-home-3-line', desc: '防水性・耐久性を高めるプロ仕様の塗装工事' },
-  { name: 'サイディング施工', icon: 'ri-building-line', desc: '外壁張り替えで断熱性・美観を一新' },
+  { name: 'サイディング施工', icon: 'ri-building-line', desc: '外壁張り替えで断熱性・美観を一新します' },
 ];
 
 // themeプロパティ（'accent' または 'primary'）を受け取ってアイコン色を切り替える

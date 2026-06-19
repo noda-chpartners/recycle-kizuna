@@ -77,3 +77,9 @@ body {
   color: oklch(var(--foreground-800));
   background-color: oklch(var(--background-50));
 }
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}

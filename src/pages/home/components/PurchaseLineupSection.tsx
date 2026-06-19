@@ -71,7 +71,7 @@ export default function PurchaseLineupSection() {
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="text-center mb-12 md:mb-16">
           <div className="reveal opacity-0 translate-y-6 transition-all duration-700">
-            <span className="inline-block text-primary-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+            <span className="inline-block text-primary-600 text-xs md:text-sm font-bold tracking-widest mb-3">
               BUYBACK LINEUP
             </span>
           </div>
